@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 import TabHeader from "../molecules/TabHeader";
-import TabContent from "../molecules/TabContent";
 import { themePrimaryColor } from "../../styles/variables";
 
 const headerCss = `
@@ -11,25 +10,13 @@ const headerCss = `
 
 const TabContainer = styled.div``;
 
-const ContentContainer = styled.div`
-  // position: absolute;
-  // top: 40px;
-  // left: 0px;
-  border: 1px solid;
-`;
-
-export default function Tab({
+export default function TabHeaderWrapper({
   title,
-  words,
-  imgUrl,
-  buttonText,
-  buttonUrl,
   isActive,
   handleClick,
   index
 }) {
   return (
-    <>
     <TabContainer>
       <TabHeader
         title={title}
@@ -41,18 +28,5 @@ export default function Tab({
         index={index}
       />
     </TabContainer>
-    <div>
-      {isActive && (
-        <ContentContainer>
-          <TabContent
-            words={words}
-            imgUrl={imgUrl}
-            buttonText={buttonText}
-            buttonUrl={buttonUrl}
-          />
-        </ContentContainer>
-      )}
-    </div>
-    </>
   );
 }

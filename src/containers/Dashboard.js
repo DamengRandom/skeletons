@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Accordions from "../components/templates/Accordions";
 import Tabs from "../components/templates/Tabs";
 import ModalWrapper from "../components/organisms/ModalWrapper";
+import CodeBlockDemo from "../components/templates/CodeBlockDemo";
 
 const DashboardContainer = styled.div`
   width: 100%;
@@ -37,6 +38,11 @@ export default function Dashboard() {
         <div>
           <button onClick={handleClick}>Open Modal</button>
           <ModalWrapper toggleModal={toggleModal} setToggleModal={setToggleModal} />
+        </div>
+        <hr />
+        <h4>Modal Skeleton</h4>
+        <div>
+          <CodeBlockDemo/>
         </div>
       </div>
     </DashboardContainer>
