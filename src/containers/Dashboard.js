@@ -7,6 +7,7 @@ import Tabs from "../components/templates/Tabs";
 import ModalWrapper from "../components/organisms/ModalWrapper";
 import CodeBlockDemo from "../components/templates/CodeBlockDemo";
 import HooksDemo from "./HooksDemo";
+import WaveBackground from "../components/atoms/WaveBackground";
 
 const DashboardContainer = styled.div`
   width: 100%;
@@ -28,6 +29,7 @@ export default function Dashboard() {
   return (
     <DashboardContainer>
       <h3>Dashboard</h3>
+      <WaveBackground />
       <div>
         <hr />
         <h4>Accordion Skeleton</h4>
