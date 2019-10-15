@@ -1,20 +1,7 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React from "react";
+import MutiAccordion from "../organisms/MutiAccordion";
 
-import TabHeaderWrapper from "../organisms/TabHeaderWrapper";
-import TabContentWrapper from "../organisms/TabContentWrapper";
-
-const TabHeaderContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-`;
-
-const TabContentContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const tabsData = [
+const accordionsData = [
   {
     title: "eum et est occaecati",
     words:
@@ -43,43 +30,22 @@ const tabsData = [
   }
 ];
 
-export default function Tabs() {
-  const [activeIndex, setActiveIndex] = useState(1);
-  const handleClick = index => {
-    setActiveIndex(activeIndex === index ? -1 : index);
-  };
-
+export default function MultiAccordions() {
   return (
-    <>
-      <TabHeaderContainer>
-        {tabsData.map(
-          ({ title }, index) => (
-            <TabHeaderWrapper
-              key={`tab-${index}`}
-              title={title}
-              isActive={activeIndex === index}
-              handleClick={handleClick}
-              index={index}
-            />
-          )
-        )}
-      </TabHeaderContainer>
-      <TabContentContainer>
-        {tabsData.map(
-          ({ words, imgUrl, buttonText, buttonUrl }, index) => (
-            <TabContentWrapper
-              key={`tab-${index}`}
-              words={words}
-              imgUrl={imgUrl}
-              buttonText={buttonText}
-              buttonUrl={buttonUrl}
-              isActive={activeIndex === index}
-              handleClick={handleClick}
-              index={index}
-            />
-          )
-        )}
-      </TabContentContainer>
-    </>
+    <div>
+      {accordionsData.map(
+        ({ title, words, imgUrl, buttonText, buttonUrl }, index) => (
+          <MutiAccordion
+            key={`multi-accordion-${title}`}
+            title={title}
+            words={words}
+            imgUrl={imgUrl}
+            buttonText={buttonText}
+            buttonUrl={buttonUrl}
+            index={index}
+          />
+        )
+      )}
+    </div>
   );
 }
