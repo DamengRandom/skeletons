@@ -58,7 +58,6 @@ export default function Dashboard() {
         <div>
           <HooksDemo />
         </div>
-        <hr />
         <h4>Simple Form Skeleton</h4>
         <div>
           <SimpleForm />

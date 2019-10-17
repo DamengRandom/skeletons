@@ -1,17 +1,11 @@
 import React from 'react';
 import { Formik, ErrorMessage } from 'formik';
-import * as Yup from "yup";
 
-const validationSchema = Yup.object().shape({
-  email: Yup.string()
-    .email('Must be a valid email address (eg: xxx@xxx.xxx)')
-    .max(50, 'Must not beyond 50 characters')
-    .required(),
-  message: Yup.string()
-    .min(2, 'Must have at least two characters')
-    .max(500, 'Must not beyond 500 characters')
-    .required()
-});
+// utils
+import { validationSchema } from "../../utils/validations/SimpleForm";
+
+// components
+import InputField from "../atoms/InputField";
 
 export default function SimpleForm() {
   return (
@@ -38,36 +32,33 @@ export default function SimpleForm() {
         isSubmitting,
       }) => (
         <form onSubmit={handleSubmit}>
-          {JSON.stringify(values)}
-          <div>
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              name="email"
-              id="SimpleFormEmail"
-              placeholder="Enter your email here .."
-              onChange={handleChange}
-              onBlur={handleBlur}
-              value={values.email}
-              className={touched.email && errors.email ? 'has-error': null}
-            />
-          </div>
+          <div>Preview data: {JSON.stringify(values)}</div>
+          <InputField
+            tag="input"
+            label="Email"
+            type="email"
+            name="email"
+            id="SimpleFormEmail"
+            placeholder="Enter your email here .."
+            onChange={handleChange}
+            onBlur={handleBlur}
+            value={values.email}
+            className={touched.email && errors.email ? 'has-error': null}
+          />
           <ErrorMessage name="email" />
-          <div>
-            <label htmlFor="message">Message</label>
-            <textarea
-              type="text"
-              name="message"
-              id="SimpleFormMessage"
-              placeholder="Leave your message here .."
-              onChange={handleChange}
-              onBlur={handleBlur}
-              value={values.message}
-              className={touched.message && errors.message ? 'has-error': null}
-            />
-          </div>
+          <InputField
+            tag="textarea"
+            label="Message"
+            type="message"
+            name="message"
+            id="SimpleFormMessage"
+            placeholder="Enter your message here .."
+            onChange={handleChange}
+            onBlur={handleBlur}
+            value={values.message}
+            className={touched.message && errors.message ? 'has-error': null}
+          />
           <ErrorMessage name="message" />
-          {console.log(touched, errors)}
           <button type="submit" disabled={isSubmitting}>Send</button>
         </form>
       )}
