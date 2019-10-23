@@ -10,6 +10,10 @@ import HooksDemo from "./HooksDemo";
 import WaveBackground from "../components/atoms/WaveBackground";
 import SimpleForm from "../components/templates/SimpleForm";
 
+import { DemoDataProvider } from "../contexts/contextDemo";
+import ContextAPIDemo from "./ContextAPIDemo";
+import ContextConsumer from "./ContextConsumer";
+
 const DashboardContainer = styled.div`
   width: 100%;
   h3 {
@@ -28,41 +32,48 @@ export default function Dashboard() {
   };
 
   return (
-    <DashboardContainer>
-      <h3>Dashboard</h3>
-    
-      <WaveBackground />
-      <div>
-        <hr />
-        <h4>Accordion Skeleton</h4>
-        <Accordions />
-        <hr />
-        <h4>Multi Accordion Skeleton</h4>
-        <MultiAccordions />
-        <hr />
-        <h4>Tab Skeleton</h4>
-        <Tabs />
-        <hr />
-        <h4>Modal Skeleton</h4>
+    <DemoDataProvider>
+      <DashboardContainer>
+        <h3>Dashboard</h3>
+      
+        <WaveBackground />
         <div>
-          <button onClick={handleClick}>Open Modal</button>
-          <ModalWrapper toggleModal={toggleModal} setToggleModal={setToggleModal} />
+          <hr />
+          <h4>Accordion Skeleton</h4>
+          <Accordions />
+          <hr />
+          <h4>Multi Accordion Skeleton</h4>
+          <MultiAccordions />
+          <hr />
+          <h4>Tab Skeleton</h4>
+          <Tabs />
+          <hr />
+          <h4>Modal Skeleton</h4>
+          <div>
+            <button onClick={handleClick}>Open Modal</button>
+            <ModalWrapper toggleModal={toggleModal} setToggleModal={setToggleModal} />
+          </div>
+          <hr />
+          <h4>Modal Skeleton</h4>
+          <div>
+            <CodeBlockDemo/>
+          </div>
+          <hr />
+          <h4>Custom Hooks Skeleton</h4>
+          <div>
+            <HooksDemo />
+          </div>
+          <h4>Simple Form Skeleton</h4>
+          <div>
+            <SimpleForm />
+          </div>
+          <h4>Context API Demo Skeleton</h4>
+          <div>
+            <ContextAPIDemo />
+            <ContextConsumer />
+          </div>
         </div>
-        <hr />
-        <h4>Modal Skeleton</h4>
-        <div>
-          <CodeBlockDemo/>
-        </div>
-        <hr />
-        <h4>Custom Hooks Skeleton</h4>
-        <div>
-          <HooksDemo />
-        </div>
-        <h4>Simple Form Skeleton</h4>
-        <div>
-          <SimpleForm />
-        </div>
-      </div>
-    </DashboardContainer>
+      </DashboardContainer>
+    </DemoDataProvider>
   );
 }

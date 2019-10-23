@@ -11,7 +11,7 @@ const InputFieldWrapper = styled.div`
   input,
   textarea {
     width: 100%;
-    font-size: 13px;
+    font-size: 13px; // size could be set from theme.js
     outline: none;
     border: 1px solid; // color could be set from theme.js
   }
