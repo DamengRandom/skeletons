@@ -30,29 +30,29 @@ export default function Tab({
 }) {
   return (
     <>
-    <TabContainer>
-      <TabHeader
-        title={title}
-        css={headerCss}
-        onClick={() => {
-          handleClick(index);
-        }}
-        isActive={isActive}
-        index={index}
-      />
-    </TabContainer>
-    <div>
-      {isActive && (
-        <ContentContainer>
-          <TabContent
-            words={words}
-            imgUrl={imgUrl}
-            buttonText={buttonText}
-            buttonUrl={buttonUrl}
-          />
-        </ContentContainer>
-      )}
-    </div>
+      <TabContainer>
+        <TabHeader
+          title={title}
+          css={headerCss}
+          onClick={() => {
+            handleClick(index);
+          }}
+          isActive={isActive}
+          index={index}
+        />
+      </TabContainer>
+      <div>
+        {isActive && (
+          <ContentContainer>
+            <TabContent
+              words={words}
+              imgUrl={imgUrl}
+              buttonText={buttonText}
+              buttonUrl={buttonUrl}
+            />
+          </ContentContainer>
+        )}
+      </div>
     </>
   );
 }
