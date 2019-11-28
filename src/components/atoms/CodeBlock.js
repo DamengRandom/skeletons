@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
 
 const PreContainer = styled.pre`
   background: black;
   color: white;
-  font-size: 16px;
+  font-size: 1rem;
   padding: 6px;
   padding-top: 0;
   &:before {

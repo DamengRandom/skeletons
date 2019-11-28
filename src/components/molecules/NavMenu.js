@@ -36,7 +36,7 @@ export default function NavMenu({ title, links, css, linksScrollable }) {
         <Text
           text={title}
           css={`
-            font-size: 16pt;
+            font-size: 1.2rem;
             font-weight: bold;
             cursor: pointer;
             @media screen and (max-width: 768px) {

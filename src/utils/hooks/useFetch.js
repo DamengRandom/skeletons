@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-export const useFetch = (url) => {
+export const useFetch = url => {
   const [state, setState] = useState({
     data: null,
     loading: false
@@ -13,16 +13,19 @@ export const useFetch = (url) => {
     });
     fetch(url)
       .then(res => res.json())
-      .then(data => setState({
-        data,
-        loading: false
-      }));
+      .then(data =>
+        setState({
+          data,
+          loading: false
+        })
+      );
 
     // const f = async () => {
-      // useEffect: how to call function in a async await format
-      // this is async syntax for useEffect hooks (Syntax sugar)
+    // useEffect: how to call function in a async await format
+    // this is async syntax for useEffect hooks (Syntax sugar)
     // }
     // f();
-  }, [url]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return state;
-}
+};

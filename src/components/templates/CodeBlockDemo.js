@@ -1,14 +1,13 @@
-import React from 'react';
+import React from "react";
 import CodeBlock from "../atoms/CodeBlock";
 
 export default function CodeBlockDemo() {
   return (
     <CodeBlock dataLang="Code Block Demo (Only)">
-      {
-        `
+      {`
         background: black;
         color: white;
-        font-size: 16px;
+        font-size: 1rem;
         padding: 6px;
         padding-top: 0;
         &:before {
@@ -21,8 +20,7 @@ export default function CodeBlockDemo() {
             background: #db2938;
             color: white;
         }
-        `
-      }
+        `}
     </CodeBlock>
-  )
+  );
 }

@@ -10,6 +10,7 @@ import HooksDemo from "./HooksDemo";
 import WaveBackground from "../components/atoms/WaveBackground";
 import SimpleForm from "../components/templates/SimpleForm";
 import NavMenu from "../components/molecules/NavMenu";
+import BricksWall from "../components/organisms/BricksWall";
 
 import { DemoDataProvider } from "../contexts/contextDemo";
 import ContextAPIDemo from "./ContextAPIDemo";
@@ -75,6 +76,10 @@ export default function Dashboard() {
             <div>
               <ContextAPIDemo />
               <ContextConsumer />
+            </div>
+            <h4>BricksWall Skeleton</h4>
+            <div>
+              <BricksWall />
             </div>
           </div>
         </DashboardContainer>

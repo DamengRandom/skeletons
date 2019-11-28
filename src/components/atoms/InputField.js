@@ -1,17 +1,17 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
 
 const InputFieldWrapper = styled.div`
   label {
     width: 100%;
-    font-size: 13px;
+    font-size: 0.875rem;
     display: block;
   }
 
   input,
   textarea {
     width: 100%;
-    font-size: 13px; // size could be set from theme.js
+    font-size: 0.875rem; // size could be set from theme.js
     outline: none;
     border: 1px solid; // color could be set from theme.js
   }
@@ -28,7 +28,7 @@ export default function InputField({
   onBlur,
   value,
   className,
-  css,
+  css
 }) {
   return (
     <InputFieldWrapper>
@@ -45,5 +45,5 @@ export default function InputField({
         css={css}
       />
     </InputFieldWrapper>
-  )
+  );
 }

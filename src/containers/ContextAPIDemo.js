@@ -13,7 +13,6 @@ export default function ContextAPIDemo() {
   return (
     <div>
       <button onClick={handleFetchData}>fetch Data</button>
-      {console.log("returned? ", context.demoData)}
     </div>
   );
 }
