@@ -11,6 +11,7 @@ import WaveBackground from "../components/atoms/WaveBackground";
 import SimpleForm from "../components/templates/SimpleForm";
 import NavMenu from "../components/molecules/NavMenu";
 import BricksWall from "../components/organisms/BricksWall";
+import InformationBoard from "../components/organisms/InformationBoard";
 
 import { DemoDataProvider } from "../contexts/contextDemo";
 import ContextAPIDemo from "./ContextAPIDemo";
@@ -18,9 +19,11 @@ import ContextConsumer from "./ContextConsumer";
 
 const DashboardContainer = styled.div`
   width: 100%;
+
   h3 {
     text-align: center;
   }
+
   & > div {
     max-width: 960px;
     margin: 0 auto;
@@ -76,6 +79,10 @@ export default function Dashboard() {
             <div>
               <ContextAPIDemo />
               <ContextConsumer />
+            </div>
+            <h4>InformationBoard Skeleton</h4>
+            <div>
+              <InformationBoard />
             </div>
             <h4>BricksWall Skeleton</h4>
             <div>
