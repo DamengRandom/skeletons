@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const BrickContainer = styled.div`
-  border: 2px solid #${props => (props.color === "ffffff" ? "db2938" : props.color)};
+  border: 2px solid #${props => (props.color === "ffffff" ? "#db2938" : props.color)};
   min-width: 240px;
   flex: 1;
   margin: 6px;
@@ -33,12 +33,11 @@ const BrickContainer = styled.div`
 
 export default function Brick({ brick, brickColor }) {
   const { title, body } = brick;
+
   return (
     <BrickContainer color={brickColor}>
-      <div>
-        <h4>{title}</h4>
-        <p>{body}</p>
-      </div>
+      <h4>{title}</h4>
+      <p>{body}</p>
     </BrickContainer>
   );
 }

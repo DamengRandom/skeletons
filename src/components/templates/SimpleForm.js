@@ -1,5 +1,5 @@
-import React from 'react';
-import { Formik, ErrorMessage } from 'formik';
+import React from "react";
+import { Formik, ErrorMessage } from "formik";
 
 // utils
 import { validationSchema } from "../../utils/validations/SimpleForm";
@@ -10,7 +10,7 @@ import InputField from "../atoms/InputField";
 export default function SimpleForm() {
   return (
     <Formik
-      initialValues={{ email: '', message: '' }}
+      initialValues={{ email: "", message: "" }}
       validationSchema={validationSchema}
       onSubmit={(values, { setSubmitting, resetForm }) => {
         setSubmitting(true);
@@ -29,7 +29,7 @@ export default function SimpleForm() {
         handleChange,
         handleBlur,
         handleSubmit,
-        isSubmitting,
+        isSubmitting
       }) => (
         <form onSubmit={handleSubmit}>
           <div>Preview data: {JSON.stringify(values)}</div>
@@ -43,7 +43,7 @@ export default function SimpleForm() {
             onChange={handleChange}
             onBlur={handleBlur}
             value={values.email}
-            className={touched.email && errors.email ? 'has-error': null}
+            className={touched.email && errors.email ? "has-error" : null}
           />
           <ErrorMessage name="email" />
           <InputField
@@ -56,12 +56,14 @@ export default function SimpleForm() {
             onChange={handleChange}
             onBlur={handleBlur}
             value={values.message}
-            className={touched.message && errors.message ? 'has-error': null}
+            className={touched.message && errors.message ? "has-error" : null}
           />
           <ErrorMessage name="message" />
-          <button type="submit" disabled={isSubmitting}>Send</button>
+          <button type="submit" disabled={isSubmitting}>
+            Send
+          </button>
         </form>
       )}
     </Formik>
-  )
+  );
 }

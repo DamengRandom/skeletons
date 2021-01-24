@@ -12,9 +12,13 @@ const ModalBox = styled.div`
 export default function Modal({ setToggleModal, children }) {
   return (
     <ModalBox>
-      <button onClick={() => {
-        setToggleModal(false);
-      }}>&#10005;</button>
+      <button
+        onClick={() => {
+          setToggleModal(false);
+        }}
+      >
+        &#10005;
+      </button>
       {children}
     </ModalBox>
   );

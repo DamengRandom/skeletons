@@ -26,7 +26,13 @@ export default function Bricks() {
       {bricks
         ? bricks
             .slice(0, 10)
-            .map(brick => <Brick brick={brick} brickColor={colorExceptWhite} />)
+            .map((eachBrick, index) => (
+              <Brick
+                key={`brick-${index}`}
+                brick={eachBrick}
+                brickColor={colorExceptWhite()}
+              />
+            ))
         : null}
     </BricksContainer>
   );

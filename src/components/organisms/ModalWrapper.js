@@ -1,5 +1,5 @@
-import React from 'react';
-import { CSSTransition } from 'react-transition-group';
+import React from "react";
+import { CSSTransition } from "react-transition-group";
 import styled, { keyframes } from "styled-components";
 
 import Modal from "../molecules/Modal";
@@ -31,7 +31,7 @@ const ModalContainer = styled.div`
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
-  animation : ${props => props.toggleModal ? fadeIn : fadeOut} 0.2s linear;
+  animation: ${props => (props.toggleModal ? fadeIn : fadeOut)} 0.2s linear;
 
   & > div {
     display: flex;
@@ -43,16 +43,14 @@ const ModalContainer = styled.div`
 
 export default function ModalWrapper({ toggleModal, setToggleModal }) {
   return (
-    <CSSTransition
-      in={toggleModal}
-      timeout={150}
-      unmountOnExit
-    >
-      <ModalContainer toggleModal={toggleModal}><div>
-      <Modal setToggleModal={setToggleModal} toggleModal={toggleModal}>
-        <p>Modal Content !!</p>
-      </Modal>
-      </div></ModalContainer>
+    <CSSTransition in={toggleModal} timeout={150} unmountOnExit>
+      <ModalContainer toggleModal={toggleModal}>
+        <div>
+          <Modal setToggleModal={setToggleModal} toggleModal={toggleModal}>
+            <p>Modal Content !!</p>
+          </Modal>
+        </div>
+      </ModalContainer>
     </CSSTransition>
-  )
+  );
 }

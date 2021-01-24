@@ -1,5 +1,4 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const UlContainer = styled.ul`
@@ -100,8 +99,6 @@ export default function NavLinks({ links = defaultLinks, linksScrollable }) {
     <UlContainer scrollable={linksScrollable} totalLinks={links.length}>
       {links.map(link => (
         <li key={link.url}>
-          {/* @TODO: connect nav links with react-router-dom lib */}
-          {/* <Link to={link.url}>{link.text}</Link> */}
           <p>{link.text}</p>
         </li>
       ))}

@@ -3,12 +3,12 @@ import React, { useState } from "react";
 import PanelHeader from "../molecules/PanelHeader";
 import PanelContent from "../molecules/PanelContent";
 
-export default function MutiAccordion({
+export default function MultiAccordion({
   title,
   words,
   imgUrl,
   buttonText,
-  buttonUrl,
+  buttonUrl
 }) {
   const [toggle, setToggle] = useState(false);
   return (

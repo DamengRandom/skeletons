@@ -52,33 +52,29 @@ export default function Tabs() {
   return (
     <>
       <TabHeaderContainer>
-        {tabsData.map(
-          ({ title }, index) => (
-            <TabHeaderWrapper
-              key={`tab-${index}`}
-              title={title}
-              isActive={activeIndex === index}
-              handleClick={handleClick}
-              index={index}
-            />
-          )
-        )}
+        {tabsData.map(({ title }, index) => (
+          <TabHeaderWrapper
+            key={`tab-${index}`}
+            title={title}
+            isActive={activeIndex === index}
+            handleClick={handleClick}
+            index={index}
+          />
+        ))}
       </TabHeaderContainer>
       <TabContentContainer>
-        {tabsData.map(
-          ({ words, imgUrl, buttonText, buttonUrl }, index) => (
-            <TabContentWrapper
-              key={`tab-${index}`}
-              words={words}
-              imgUrl={imgUrl}
-              buttonText={buttonText}
-              buttonUrl={buttonUrl}
-              isActive={activeIndex === index}
-              handleClick={handleClick}
-              index={index}
-            />
-          )
-        )}
+        {tabsData.map(({ words, imgUrl, buttonText, buttonUrl }, index) => (
+          <TabContentWrapper
+            key={`tab-${index}`}
+            words={words}
+            imgUrl={imgUrl}
+            buttonText={buttonText}
+            buttonUrl={buttonUrl}
+            isActive={activeIndex === index}
+            handleClick={handleClick}
+            index={index}
+          />
+        ))}
       </TabContentContainer>
     </>
   );

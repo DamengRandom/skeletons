@@ -1,5 +1,5 @@
 import React from "react";
-import MutiAccordion from "../organisms/MutiAccordion";
+import MultiAccordion from "../organisms/MultiAccordion";
 
 const accordionsData = [
   {
@@ -35,7 +35,7 @@ export default function MultiAccordions() {
     <div>
       {accordionsData.map(
         ({ title, words, imgUrl, buttonText, buttonUrl }, index) => (
-          <MutiAccordion
+          <MultiAccordion
             key={`multi-accordion-${title}`}
             title={title}
             words={words}

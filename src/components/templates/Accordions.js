@@ -34,7 +34,7 @@ export default function Accordions() {
   const [activeIndex, setActiveIndex] = useState(-1);
   const toggleAccordionIndex = index =>
     setActiveIndex(activeIndex === index ? -1 : index);
-  // activeIndex either go with index or -1, and then, pass value as part of isAvtive logic
+  // activeIndex either go with index or -1, and then, pass value as part of isActive logic
   return (
     <div>
       {accordionsData.map(

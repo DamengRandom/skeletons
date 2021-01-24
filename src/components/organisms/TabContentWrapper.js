@@ -12,7 +12,7 @@ export default function TabContentWrapper({
   imgUrl,
   buttonText,
   buttonUrl,
-  isActive,
+  isActive
 }) {
   return (
     <div>
