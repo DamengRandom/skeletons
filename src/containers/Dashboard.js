@@ -13,6 +13,7 @@ import NavMenu from "../components/molecules/NavMenu";
 import BricksWall from "../components/organisms/BricksWall";
 import InformationBoard from "../components/organisms/InformationBoard";
 import Pagination from "../components/templates/Pagination";
+import SliderShow from "../components/templates/SliderShow";
 
 import { DemoDataProvider } from "../contexts/contextDemo";
 import ContextAPIDemo from "./ContextAPIDemo";
@@ -92,6 +93,10 @@ export default function Dashboard() {
             <h4>Pagination Skeleton</h4>
             <div>
               <Pagination />
+            </div>
+            <h4>SlideShow Skeleton</h4>
+            <div>
+              <SliderShow />
             </div>
           </div>
         </DashboardContainer>

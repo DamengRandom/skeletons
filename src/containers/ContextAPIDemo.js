@@ -15,4 +15,4 @@ export default function ContextAPIDemo() {
       <button onClick={handleFetchData}>fetch Data</button>
     </div>
   );
-}
+};
